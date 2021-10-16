@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testImplementation group: 'junit', name: 'junit', version: '4.13'
+    testImplementation 'com.github.stefanbirkner:system-lambda:1.0.0'
+
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation("com.google.guava:guava:25.0-jre")
+    implementation("org.ahocorasick:ahocorasick:0.4.0")
+    implementation("com.jramoyo:indexed-file-reader-java6:1.0")
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
